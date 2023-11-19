@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "8c173fc7-662f-4210-9e6b-8ad281628e14",
+		"name": "rest-api-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30660871"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY1NTkwOTliZjU3MjQ5YmY0NDg5NTc0NCJ9.42o6lyIxS6EyfmVVNxk7gpOEzgtuMFAfvT_VUwSZWRE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "my 3rd post",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/hark6/Downloads/silas-baisch-K785Da4A_JA-unsplash (1).jpg"
+						}
+					]
+				},
+				"url": "localhost:8000/api/post"
+			},
+			"response": []
+		},
+		{
+			"name": "Index Post",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY1NTkwOTRlZjU3MjQ5YmY0NDg5NTczZSJ9.8adiYMUAiJZ3VzmpmzlgUSMKPp58fvWCwEwzi9siSqM",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8000/api/post"
+			},
+			"response": []
+		},
+		{
+			"name": "Show Post",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY1NThmZDhlZjI5MGYyMmIyZDc1Mjc1NCJ9.xaasQPoSOIM7VFWJB1PUwiCLenF1tPa6Eonm7bZRVdE",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8000/api/post/65590597f57249bf44895734"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY1NThmZDhlZjI5MGYyMmIyZDc1Mjc1NCJ9.xaasQPoSOIM7VFWJB1PUwiCLenF1tPa6Eonm7bZRVdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "localhost:8000/api/post/65590597f57249bf44895734"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY1NThmZDhlZjI5MGYyMmIyZDc1Mjc1NCJ9.xaasQPoSOIM7VFWJB1PUwiCLenF1tPa6Eonm7bZRVdE",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8000/api/post"
+			},
+			"response": []
+		},
+		{
+			"name": "Signup Post",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"user 3\",\r\n    \"email\":\"user3@guser.com\",\r\n    \"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/api/auth/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Login Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"user1@guser.com\",\r\n    \"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Me Auth",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY1NThmZDhlZjI5MGYyMmIyZDc1Mjc1NCJ9.xaasQPoSOIM7VFWJB1PUwiCLenF1tPa6Eonm7bZRVdE",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8000/api/auth/me"
+			},
+			"response": []
+		},
+		{
+			"name": "follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY1NTkwOTRlZjU3MjQ5YmY0NDg5NTczZSJ9.8adiYMUAiJZ3VzmpmzlgUSMKPp58fvWCwEwzi9siSqM",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8000/api/follow/6559096ff57249bf44895741"
+			},
+			"response": []
+		}
+	]
+}
